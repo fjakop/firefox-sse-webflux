@@ -1,0 +1,11 @@
+<html>
+<body>
+HELLO WORLD.
+<script>
+    const evtSource = new EventSource("/api/eventsource/timestamps");
+    evtSource.onmessage = function(event) {
+        console.log("message: " + event.data);
+    }
+</script>
+</body>
+</html>
